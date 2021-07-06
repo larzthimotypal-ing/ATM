@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Menu from './pages/Menu'
+import Withdraw from './pages/Withdraw'
+import Balance from './pages/Balance'
+import{BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import{useState} from 'react'
+
 
 function App() {
+  const [input, setInput] = useState(0)
+  const [balance, setBalance] = useState(1000)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Router>
+        <div className="screen">
+          <h1 className="title">ATM</h1>
+          <Switch>
+            <Route exact path='/' component={Menu}/>
+            <Route exact path='/withdraw' render={(props) => <Withdraw{...props} 
+            input={input} setInput={setInput}
+            balance={balance} setBalance={setBalance}/>}/>
+            <Route exact path='/balance' render={(props) => <Balance{...props}
+            balance={balance}/>}/>
+          </Switch>   
+        </div>
+      </Router>
     </div>
   );
 }

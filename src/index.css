@@ -1,13 +1,160 @@
-body {
+body{
+  height:100%;
+  font-size:16px;
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.link{
+  text-decoration: none;
+}
+
+.screen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 5rem;
+  background-color: rgb(10, 10, 233);
+  color: white;
+  margin: 3rem;
+  border-radius: 25px;
+  height: 600px;
+}
+
+.title{
+  letter-spacing: 6px;
+  font-size: 5rem;
+}
+
+/*Colors*/
+.blue{
+  color: rgb(5, 48, 189);
+}
+.red{
+  color: rgb(240, 23, 23);
+}
+.yellow{
+  color: rgb(210, 228, 48);
+}
+.green{
+  color: rgb(13, 175, 40);
+}
+.white{
+  color: rgb(255, 255, 255);
+}
+.black{
+  color: rgb(0, 0, 0);
+}
+
+.bg-blue{
+  background-color: rgb(24, 132, 255);
+}
+.bg-red{
+  background-color: rgb(240, 23, 23);
+}
+.bg-yellow{
+  background-color: rgb(210, 228, 48);
+}
+.bg-green{
+  background-color: rgb(13, 175, 40);
+}
+
+/*Buttons*/
+
+.btn{
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn:hover{
+  transform: scale(1.1);
+}
+
+.menu{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-instructions h3{
+  font-size: 3rem;
+}
+.menu-instructions p{
+  font-size: 2rem;
+}
+
+.menu-selection{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.menu-button{
+  margin: 1rem;
+  margin-left: auto;
+  min-width: 150px;
+  text-align: right;
+}
+
+/*Withdraw*/
+.withdraw{
+  display: flex;
+  flex-direction: column;
+}
+
+.withdraw-instructions{
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: .5px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.withdraw-selection{
+  margin-top: 3rem;
+}
+
+input{
+  padding: 10px;
+  width: 60%;
+  border-radius: 5px;
+}
+
+.confirm-button{
+  margin: 1rem;
+  min-width: 150px;
+  text-align: center;
+}
+
+.amount{
+  font-weight: 900;
+}
+
+.balance{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
